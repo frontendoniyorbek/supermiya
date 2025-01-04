@@ -19,3 +19,11 @@ window.addEventListener('resize', () => {
 		mobileMenu.classList.remove('active');
 	}
 });
+
+var splide = new Splide('.splide', {
+	type: 'loop', // Slayderni aylantirish
+	perPage: 3, // Har bir sahifada 3 ta slayd
+	perMove: 1, // Har safar 1 slaydni ko‘rsatish
+});
+
+splide.mount(); // Slayderni ishga tushirish
