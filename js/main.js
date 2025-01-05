@@ -49,39 +49,31 @@ window.addEventListener('resize', () => {
 	}
 });
 
+/* JavaScript Initialization */
 var splide = new Splide('.splide', {
-	type: 'loop', // Slayderni aylantirish
-	perPage: 3, // Har bir sahifada 3 ta slayd
-	perMove: 1, // Har safar 1 slaydni ko‘rsatish
+	type: 'loop',
+	perPage: 3,
+	perMove: 1,
+	gap: 20,
+	breakpoints: {
+		1024: {
+			perPage: 3,
+		},
+		860: {
+			perPage: 2,
+		},
+		768: {
+			perPage: 2,
+		},
+		640: {
+			perPage: 1,
+		},
+		420: {
+			perPage: 1,
+		},
+	},
+	arrows: true,
+	pagination: false,
 });
 
-splide.mount(); // Slayderni ishga tushirish
-
-document.addEventListener('DOMContentLoaded', () => {
-	const headers = document.querySelectorAll('.accordion-header');
-
-	headers.forEach(header => {
-		header.addEventListener('click', () => {
-			const currentlyActive = document.querySelector('.accordion-content.active');
-			const currentIcon = document.querySelector('.accordion-header.active .icon');
-			const content = header.nextElementSibling;
-			const icon = header.querySelector('.icon');
-
-			if (currentlyActive && currentlyActive !== content) {
-				currentlyActive.classList.remove('active');
-				currentIcon.innerHTML = '&#9660;';
-				currentIcon.classList.remove('active');
-			}
-
-			if (content.classList.contains('active')) {
-				content.classList.remove('active');
-				icon.innerHTML = '&#9660;';
-			} else {
-				content.classList.add('active');
-				icon.innerHTML = '&#9650;';
-			}
-
-			header.classList.toggle('active');
-		});
-	});
-});
+splide.mount();
