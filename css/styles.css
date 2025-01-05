@@ -21,6 +21,7 @@ body {
 	font-weight: 400;
 	font-size: 26px;
 	line-height: 1.35;
+	background-color: var(--black-color);
 	color: var(--light-gray);
 	overflow-x: hidden;
 }
@@ -78,6 +79,10 @@ p {
 
 .btn:active {
 	opacity: 0.6;
+}
+
+.main-bottom-bg {
+	background-color: var(--white-color);
 }
 
 .site-top {
@@ -319,7 +324,6 @@ p {
 }
 .video-thumbnail {
 	width: 100%;
-	height: 494px;
 	object-fit: content;
 }
 .video-play-button {
@@ -507,7 +511,7 @@ p {
 .course-feedback-section {
 	padding-top: 293px;
 	padding-bottom: 120px;
-	background-color: var(--black-color);
+	/* background-color: var(--black-color); */
 	background-image: url(../images/course-feedback/stars.svg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -819,8 +823,8 @@ p {
 }
 
 .pricing-card-img {
-	width: 308px;
-	height: 308px;
+	width: 100%;
+	height: auto;
 	object-fit: contain;
 }
 
@@ -1025,7 +1029,7 @@ p {
 	}
 
 	.course-feedback-section {
-		padding-top: 230px;
+		padding-top: 900px;
 		padding-bottom: 90px;
 	}
 
@@ -1189,7 +1193,6 @@ p {
 	}
 
 	.course-feedback-section {
-		padding-top: 200px;
 		padding-bottom: 80px;
 	}
 
@@ -1451,7 +1454,6 @@ p {
 	}
 
 	.course-feedback-section {
-		padding-top: 180px;
 		padding-bottom: 70px;
 	}
 
@@ -1649,7 +1651,7 @@ p {
 	/* Pricing end */
 
 	.course-feedback-section {
-		padding-top: 150px;
+		padding-top: 500px;
 		padding-bottom: 80px;
 	}
 
@@ -1812,7 +1814,6 @@ p {
 	}
 
 	.course-feedback-section {
-		padding-top: 120px;
 		padding-bottom: 70px;
 	}
 
@@ -1973,6 +1974,10 @@ p {
 		font-size: 14px;
 		padding: 12px;
 	}
+
+	.course-feedback-section {
+		padding-top: 600px;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -2073,7 +2078,6 @@ p {
 	}
 
 	.course-feedback-section {
-		padding-top: 100px;
 		padding-bottom: 60px;
 	}
 
@@ -2110,7 +2114,7 @@ p {
 
 @media screen and (max-width: 420px) {
 	.course-feedback-section {
-		padding-top: 90px;
+		padding-top: 550px;
 		padding-bottom: 50px;
 	}
 
@@ -2160,6 +2164,15 @@ p {
 	.accordion-content {
 		font-size: 14px;
 		padding: 10px;
+	}
+
+	.card-image {
+		width: 200px;
+		height: 200px;
+	}
+
+	.pricing-card {
+		padding: 100px 15px 15px;
 	}
 
 	.footer-img {
