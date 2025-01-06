@@ -750,7 +750,7 @@ p {
 	transform: rotate(180deg);
 }
 
-.accordion-content {
+/* .accordion-content {
 	display: none;
 	padding: 30px;
 	font-size: 24px;
@@ -760,7 +760,7 @@ p {
 	color: var(--text-color);
 	border-radius: 24px;
 	margin: 10px 0 20px;
-}
+} */
 
 .accordion-content span {
 	font-weight: 700;
@@ -773,8 +773,32 @@ p {
 	height: 44px;
 }
 
-.accordion-content.active {
+/* .accordion-content.active {
 	display: block;
+} */
+
+.accordion-content {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+	padding: 0 30px;
+	background-color: var(--light-gray);
+	color: var(--text-color);
+	border-radius: 24px;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+.accordion-content.active {
+	max-height: 300px; /* Contentning maksimal balandligini sozlang */
+	padding: 30px;
+}
+
+.accordion-header.active .icon {
+	transform: rotate(180deg);
+	transition: transform 0.3s ease-in-out;
 }
 /* FAQ END */
 
@@ -1242,7 +1266,7 @@ p {
 
 	.accordion-content {
 		font-size: 20px;
-		padding: 20px;
+		/* padding: 20px; */
 	}
 
 	.faq-titile {
@@ -1355,7 +1379,7 @@ p {
 
 	.accordion-content {
 		font-size: 18px;
-		padding: 18px;
+		/* padding: 18px; */
 	}
 }
 @media screen and (max-width: 860px) {
@@ -1458,7 +1482,7 @@ p {
 	}
 
 	.splide__slide {
-		max-width: 320px;
+		max-width: 100%;
 		padding: 14px 18px 25px;
 	}
 
@@ -1703,7 +1727,7 @@ p {
 
 	.accordion-content {
 		font-size: 16px;
-		padding: 15px;
+		/* padding: 15px; */
 	}
 
 	.site-footer-container {
@@ -1972,7 +1996,7 @@ p {
 
 	.accordion-content {
 		font-size: 14px;
-		padding: 12px;
+		/* padding: 12px; */
 	}
 
 	.course-feedback-section {
@@ -2163,7 +2187,7 @@ p {
 
 	.accordion-content {
 		font-size: 14px;
-		padding: 10px;
+		/* padding: 10px; */
 	}
 
 	.card-image {

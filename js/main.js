@@ -3,17 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	headers.forEach(header => {
 		header.addEventListener('click', () => {
-			const currentlyActive = document.querySelector('.accordion-content.active');
+			const currentlyActiveContent = document.querySelector('.accordion-content.active');
 			const currentIcon = document.querySelector('.accordion-header.active .icon');
 			const content = header.nextElementSibling;
 			const icon = header.querySelector('.icon');
 
-			if (currentlyActive && currentlyActive !== content) {
-				currentlyActive.classList.remove('active');
-				currentIcon.innerHTML = '&#9660;';
-				currentIcon.classList.remove('active');
+			// Oldin ochiq bo'lgan accordionni yopish
+			if (currentlyActiveContent && currentlyActiveContent !== content) {
+				currentlyActiveContent.classList.remove('active');
+				if (currentIcon) currentIcon.innerHTML = '&#9660;';
+				currentlyActiveContent.previousElementSibling.classList.remove('active');
 			}
 
+			// Hozirgi accordionni ochish yoki yopish
 			if (content.classList.contains('active')) {
 				content.classList.remove('active');
 				icon.innerHTML = '&#9660;';
