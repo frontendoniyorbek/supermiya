@@ -35,17 +35,20 @@ const closeMenu = document.querySelector('.close-menu');
 // Mobile menu open
 menuToggle.addEventListener('click', () => {
 	mobileMenu.classList.add('active');
+	document.body.style.overflow = 'hidden'; // Scrollni bloklash
 });
 
 // Close mobile menu
 closeMenu.addEventListener('click', () => {
 	mobileMenu.classList.remove('active');
+	document.body.style.overflow = ''; // Scrollni qayta yoqish
 });
 
 // Close the menu when screen is resized to larger than mobile view
 window.addEventListener('resize', () => {
 	if (window.innerWidth > 820) {
 		mobileMenu.classList.remove('active');
+		document.body.style.overflow = ''; // Scrollni qayta yoqish
 	}
 });
 
